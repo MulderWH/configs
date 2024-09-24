@@ -1,0 +1,18 @@
+preInfo: "Let's go and make some changes to your native mobile app!"
+steps:
+  - task: android_manifest
+    label: "Integrate Firebase"
+    actions:
+      - block: "queries"
+        append: 
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:mimeType="application/pdf" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:mimeType="application/xlsx" />
+        </intent>
+postInfo:
+  title: "Integration Completed"
+  message: "The integration process has finished successfully."
